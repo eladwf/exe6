@@ -1,13 +1,15 @@
 #ifndef _FACTORY_H_
 #define _FACTORY_H_
-
+#include <string>
+using namespace std;
 
 class Factory
 {
 	private:
-		string name;
+	string name;
 	int annual_output;
 	public:
+		friend ostream& operator<<(ostream& out, const Factory& f);
 		void setOutput(int oupout){ annual_output = oupout; };
 	virtual	void print()const = 0;
 };
