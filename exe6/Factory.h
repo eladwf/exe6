@@ -9,6 +9,9 @@ class Factory
 	string name;
 	int annual_output;
 	public:
+		Factory(){ name = ""; };
+		Factory(string n, int out);
+		Factory(const Factory& f);
 		friend ostream& operator<<(ostream& out, const Factory& f);
 		void setOutput(int oupout){ annual_output = oupout; };
 	virtual	void print()const = 0;

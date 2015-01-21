@@ -7,10 +7,12 @@ using namespace std;
 class TVfactory:public Factory
 {
 private:
-	
+	int fullHD;
+	int HDready;
 public:
+	TVfactory();
 	friend ostream& operator<<(ostream& out, const TVfactory& f);
-
+	
 };
 
 
