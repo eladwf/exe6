@@ -12,6 +12,11 @@ Factory::Factory(const Factory &f)
 	this->name = f.name;
 }
 
+void Factory::showOutput()
+{
+	cout << this->annual_output;
+}
+
 ostream& operator<<(ostream& out, const Factory& f)
 {
 	out << "( " << f.annual_output << ")";
